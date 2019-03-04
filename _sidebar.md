@@ -1,7 +1,7 @@
 - 1.markdown
   - [markdown基本语法](markdown/markdown基本语法)
 - 2.git
-  - [git](git/git)
+  - [git命令](git/git命令)
 
 - 3.前端
   - [vue](前端/vue)
