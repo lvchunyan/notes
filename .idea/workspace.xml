@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46b0ea1d-7e06-4147-9037-d3bfbf1a0045" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/前端/vue-router.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_sidebar.md" beforeDir="false" afterPath="$PROJECT_DIR$/_sidebar.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/前端/vue.md" beforeDir="false" afterPath="$PROJECT_DIR$/前端/vue.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,12 +54,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_sidebar.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="_sidebar.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_sidebar.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="119">
-                <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+              <first_editor relative-caret-position="102">
+                <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
               </first_editor>
               <second_editor />
             </state>
@@ -73,12 +75,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vue.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="vue.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/前端/vue.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="247">
-                <caret line="55" column="3" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="3" />
+              <first_editor>
+                <caret line="55" column="13" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
+                <folding>
+                  <element signature="e#0#16#0" />
+                </folding>
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vue-router.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/前端/vue-router.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="68">
+                <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
               </first_editor>
               <second_editor />
             </state>
@@ -135,9 +152,10 @@
         <option value="$PROJECT_DIR$/markdown/markdown基本语法.md" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/_coverpage.md" />
-        <option value="$PROJECT_DIR$/_sidebar.md" />
         <option value="$PROJECT_DIR$/前端/react.md" />
         <option value="$PROJECT_DIR$/前端/vue.md" />
+        <option value="$PROJECT_DIR$/前端/vue-router.md" />
+        <option value="$PROJECT_DIR$/_sidebar.md" />
       </list>
     </option>
   </component>
@@ -269,16 +287,15 @@
       <workItem from="1551410627284" duration="1348000" />
       <workItem from="1551661783061" duration="897000" />
       <workItem from="1551676857966" duration="9913000" />
-      <workItem from="1551748723064" duration="596000" />
+      <workItem from="1551748723064" duration="1243000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28349000" />
+    <option name="totallyTimeSpent" value="28996000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -421,6 +438,9 @@
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="935">
             <caret line="55" column="3" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="3" />
+            <folding>
+              <element signature="e#0#16#0" />
+            </folding>
           </first_editor>
           <second_editor />
         </state>
@@ -705,16 +725,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_sidebar.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="119">
-            <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/markdown/markdown基本语法.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -738,8 +748,31 @@
     <entry file="file://$PROJECT_DIR$/前端/vue.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="247">
-            <caret line="55" column="3" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="3" />
+          <first_editor>
+            <caret line="55" column="13" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
+            <folding>
+              <element signature="e#0#16#0" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端/vue-router.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="68">
+            <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_sidebar.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="102">
+            <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
           </first_editor>
           <second_editor />
         </state>
