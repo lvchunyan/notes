@@ -52,6 +52,8 @@
     vm.$watch('a', function (newValue, oldValue) {
       // 这个回调将在 `vm.a` 改变后调用
     })
+    
+   - 4.3 声明周期
 
 
 ## vue-router(路由管理器)
