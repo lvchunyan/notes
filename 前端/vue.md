@@ -1,6 +1,7 @@
 ## vue.js(渐进式框架)
 
-## 安装：npm install vue
+## 安装
+    npm install vue
 
 ## 介绍
 

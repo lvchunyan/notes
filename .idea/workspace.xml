@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46b0ea1d-7e06-4147-9037-d3bfbf1a0045" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/前端/vue.md" beforeDir="false" afterPath="$PROJECT_DIR$/前端/vue.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/前端/vue-router.md" beforeDir="false" afterPath="$PROJECT_DIR$/前端/vue-router.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -72,24 +72,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vue.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="vue.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/前端/vue.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="267">
-                <caret line="107" column="44" lean-forward="true" selection-start-line="107" selection-start-column="44" selection-end-line="107" selection-end-column="44" />
+              <first_editor relative-caret-position="18">
+                <caret line="103" column="9" lean-forward="true" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="9" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vue-router.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="vue-router.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/前端/vue-router.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="68">
-                <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+              <first_editor relative-caret-position="204">
+                <caret line="47" column="22" lean-forward="true" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
               </first_editor>
               <second_editor />
             </state>
@@ -147,9 +147,9 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/_coverpage.md" />
         <option value="$PROJECT_DIR$/前端/react.md" />
-        <option value="$PROJECT_DIR$/前端/vue-router.md" />
         <option value="$PROJECT_DIR$/_sidebar.md" />
         <option value="$PROJECT_DIR$/前端/vue.md" />
+        <option value="$PROJECT_DIR$/前端/vue-router.md" />
       </list>
     </option>
   </component>
@@ -286,12 +286,12 @@
       <workItem from="1551410627284" duration="1348000" />
       <workItem from="1551661783061" duration="897000" />
       <workItem from="1551676857966" duration="9913000" />
-      <workItem from="1551748723064" duration="5746000" />
+      <workItem from="1551748723064" duration="6268000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33499000" />
+    <option name="totallyTimeSpent" value="34021000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -306,7 +306,7 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.19669421" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3553719" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2685325" />
@@ -751,21 +751,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/前端/vue-router.md">
+    <entry file="file://$PROJECT_DIR$/前端/vue.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="68">
-            <caret line="4" column="5" lean-forward="true" selection-start-line="4" selection-start-column="5" selection-end-line="4" selection-end-column="5" />
+          <first_editor relative-caret-position="18">
+            <caret line="103" column="9" lean-forward="true" selection-start-line="103" selection-start-column="9" selection-end-line="103" selection-end-column="9" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/前端/vue.md">
+    <entry file="file://$PROJECT_DIR$/前端/vue-router.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="267">
-            <caret line="107" column="44" lean-forward="true" selection-start-line="107" selection-start-column="44" selection-end-line="107" selection-end-column="44" />
+          <first_editor relative-caret-position="204">
+            <caret line="47" column="22" lean-forward="true" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
           </first_editor>
           <second_editor />
         </state>

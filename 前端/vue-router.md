@@ -1,15 +1,17 @@
 ## vue-router(路由管理器)
 
-> 安装：npm install vue-router
+## 安装
+    npm install vue-router
 
-> 配置：
-       * import Vue from 'vue'
-       * import VueRouter from 'vue-router'
-       * Vue.use(VueRouter)
+## 配置
+    * import Vue from 'vue'
+    * import VueRouter from 'vue-router'
+    * Vue.use(VueRouter)
  
-> 内容：在Vue实例内部，你可以通过$router访问路由实例。因此你可以调用this.$router.push
+## 路由
+    在Vue实例内部，你可以通过$router访问路由实例。因此你可以调用this.$router.push
 
->> router.push (向history栈添加一个新的记录，可以返回之前的URL)
+- 1.router.push (向history栈添加一个新的记录，可以返回之前的URL)
       
 | 声明式 | 编程式 |
 | ------ | ------ |
@@ -26,13 +28,13 @@
        // 这里的 params 不生效
        router.push({ path: '/user', params: { userId }}) // -> /user
 
->> router.replace(替换当前history栈中的记录)
+- 2.router.replace(替换当前history栈中的记录)
 
 | 声明式 | 编程式 |
 | ------ | ------ |
 | router-link replace | router.replace(...) |
 
->> router.go(n)(参数是一个整数，意思是在历史记录中向前或者后退多少步)
+- 3.router.go(n)(参数是一个整数，意思是在历史记录中向前或者后退多少步)
 
        router.go(1)  // 在浏览器记录中前进一步，等同于 history.forward()
        router.go(-1)  // 后退一步记录，等同于 history.back()
@@ -40,11 +42,12 @@
        router.go(-100)  // 如果 history 记录不够用，那就默默地失败呗
        router.go(100)  // 如果 history 记录不够用，那就默默地失败呗
        
->> router-view(命名视图：一个视图使用一个组件渲染)
+- 4.router-view(命名视图：一个视图使用一个组件渲染)
 
->> 导航守卫（主要用来通过跳转或取消的方式守卫导航）
+## 导航守卫
+    主要用来通过跳转或取消的方式守卫导航
 
-   * 全局前置守卫（router.beforeEach）
+   * 1.全局前置守卫（router.beforeEach）
    
    
        const router = new VueRouter({ ... })
@@ -62,17 +65,17 @@
            next(error)：（2.4.0+）如果传入next的参数是一个Error实例，则导航会被终止且该错误会被传递给router.onError()注册过的回调。
        确保要调用next方法，否则钩子就不会被解决。
 
-   * 全局解析守卫(router.beforeResolve)
+   * 2.全局解析守卫(router.beforeResolve)
       
       
        同router.beforeEach类似，区别是在导航被确认之前，同时在所有组件内守卫和异步路由组件被解析之后，解析守卫就被调用
     
-   * 全局后置钩子（router.afterEach） 
+   * 3.全局后置钩子（router.afterEach） 
    
    
        和守卫不同的是，钩子这些不会接受next函数，不会改变导航本身
        
-   * 路由独享的守卫（beforeEnter）
+   * 4.路由独享的守卫（beforeEnter）
     
     
        在路由配置上直接定义beforeEnter守卫（与全局前置守卫的方法参数是一样的）：
@@ -88,7 +91,7 @@
          ]
        })
        
-   * 组件内的守卫
+   * 5.组件内的守卫
    
        
        beforeRouteEnter
