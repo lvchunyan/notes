@@ -112,6 +112,137 @@
          
 
 ## 计算属性和侦听器
-> 1.计算属性
 
-> 2.侦听器      
+> 1.计算属性(复杂逻辑，computed)
+
+    <div id="example">
+      <p>Original message: "{{ message }}"</p>
+      <p>Computed reversed message: "{{ reversedMessage }}"</p>
+    </div>
+    var vm = new Vue({
+      el: '#example',
+      data: {
+        message: 'Hello'
+      },
+      computed: {
+        // 计算属性的 getter
+        reversedMessage: function () {
+          // `this` 指向 vm 实例
+          return this.message.split('').reverse().join('')  //翻转字符串
+        }
+      }
+    })
+    结果：
+    Original message: "Hello"
+    Computed reversed message: "olleH"
+    
+    另外可以通过方法来实现上述问题：
+    <p>Reversed message: "{{ reversedMessage() }}"</p>
+    // 在组件中
+    methods: {
+      reversedMessage: function () {
+        return this.message.split('').reverse().join('')
+      }
+    }
+    
+    * 注：计算属性缓存 vs 方法的不同是计算属性是基于它们的依赖进行缓存的
+    
+    计算属性默认只有 getter ，不过在需要时你也可以提供一个 setter ：
+    
+    computed: {
+      fullName: {
+        // getter
+        get: function () {
+          return this.firstName + ' ' + this.lastName
+        },
+        // setter
+        set: function (newValue) {
+          var names = newValue.split(' ')
+          this.firstName = names[0]
+          this.lastName = names[names.length - 1]
+        }
+      }
+    }
+    现在再运行 vm.fullName = 'John Doe' 时，setter 会被调用，vm.firstName 和 vm.lastName 也会相应地被更新。
+> 2.侦听器（watch）
+
+## Class 与 Style 绑定
+> 绑定 HTML Class（区分在于逗号和冒号之别）
+
+- 对象语法（传给 v-bind:class 一个对象，以动态地切换 class）
+      <div v-bind:class="{ active: isActive }"></div>
+      // isActive：true; 渲染：<div class="active"></div>
+      // isActive：false; 渲染：<div></div>
+      也可以在对象中传入更多属性来动态切换多个 class
+      <div class="static" v-bind:class="{ active: isActive, 'text-danger': hasError }"></div>
+      // isActive：true, hasError：false; 渲染：<div class="static active"></div>
+- 数组语法（把一个数组传给 v-bind:class，以应用一个 class 列表）
+      <div v-bind:class="[activeClass, errorClass]"></div>
+      //activeClass: 'active',errorClass: 'text-danger'; 渲染：<div class="active text-danger"></div>
+      如果你也想根据条件切换列表中的 class，可以用三元表达式：
+      <div v-bind:class="[isActive ? activeClass : '', errorClass]"></div>
+      // isActive:true; 渲染：<div class="activeClass errorClass"></div>
+      // isActive:false; 渲染：<div class="errorClass"></div>
+- 用在组件上
+      组件：Vue.component('my-component', {
+                 template: '<p class="foo bar">Hi</p>'
+               })
+      加 class: <my-component class="baz boo"></my-component>
+      渲染：<p class="foo bar baz boo">Hi</p>
+      带数据绑定 class ：<my-component v-bind:class="{ active: isActive }"></my-component>
+      渲染：<p class="foo bar active">Hi</p>
+> 绑定内联样式
+
+- 对象语法
+
+  v-bind:style 的对象语法十分直观——看着非常像 CSS，但其实是一个 JavaScript 对象。CSS 属性名可以用驼峰式 (camelCase) 或短横线分隔 (kebab-case，记得用单引号括起来) 来命名
+      <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }"></div> //activeColor: 'red', fontSize: 30
+      <div v-bind:style="styleObject"></div>  //直接绑定到一个样式对象
+      data: {
+        styleObject: {
+          color: 'red',
+          fontSize: '13px'
+        }
+      }
+      
+- 数组语法
+  
+  v-bind:style 的数组语法可以将多个样式对象应用到同一个元素上：
+       <div v-bind:style="[baseStyles, overridingStyles]"></div>
+- 自动添加前缀
+
+      -webkit- (谷歌, Safari, 新版Opera浏览器等)
+      -moz- (火狐浏览器)
+      -o- (旧版Opera浏览器等)
+      -ms- (IE浏览器 和 Edge浏览器)
+## 条件渲染
+> v-if v-else-if v-else
+
+      <h1 v-if="awesome">Vue is awesome!</h1>
+      <h1 v-else>Oh no 😢</h1>
+      
+      key 管理可复用的元素
+      <template v-if="loginType === 'username'">
+        <label>Username</label>
+        <input placeholder="Enter your username" key="username-input">
+      </template>
+      <template v-else>
+        <label>Email</label>
+        <input placeholder="Enter your email address" key="email-input">
+      </template>
+      * 每次切换时，输入框都将被重新渲染(即清空上次输入的内容)
+      * 注意，<label> 元素仍然会被高效地复用，因为它们没有添加 key 属性。
+> v-show 
+
+      不同的是带有 v-show 的元素始终会被渲染并保留在 DOM 中。v-show 只是简单地切换元素的 CSS 属性 display。
+      * 注：v-show 不支持 <template> 元素，也不支持 v-else。
+> v-if vs v-show
+
+      v-if 是“真正”的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建。
+      v-if 也是惰性的：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。
+      相比之下，v-show 就简单得多——不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 进行切换。
+      一般来说，v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销。因此，如果需要非常频繁地切换，则使用 v-show 较好；如果在运行时条件很少改变，则使用 v-if 较好。
+> v-if 与 v-for 一起使用
+     
+      * 注：不推荐同时使用 v-if 和 v-for
+      当 v-if 与 v-for 一起使用时，v-for 具有比 v-if 更高的优先级
