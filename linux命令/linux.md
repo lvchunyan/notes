@@ -7,5 +7,5 @@
     5.echo hello world;
     6.键入 esc
     7.键入 :wq
-    8.chmod 700 hello.sh
+    8.chmod 755 hello.sh
     9.执行./hello.sh
