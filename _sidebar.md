@@ -9,6 +9,7 @@
 
 - 4.前端
   - [vue](前端/vue)
+  - [vuex](前端/vuex)
   - [vue框架小结](前端/vue框架小结)
   - [vue-router](前端/vue-router)
   - [react](前端/react)
