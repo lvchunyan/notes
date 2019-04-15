@@ -166,6 +166,10 @@
     现在再运行 vm.fullName = 'John Doe' 时，setter 会被调用，vm.firstName 和 vm.lastName 也会相应地被更新。
 > 2.侦听器（watch）
 
+> 3.过滤器（filters）
+    
+    在{{}}插入的尾部添加一个管道符“（|）”对数据进行过滤，经常用于格式化文本，比如字母大小写等。
+
 ## Class 与 Style 绑定
 > 绑定 HTML Class（区分在于逗号和冒号之别）
 
@@ -248,3 +252,240 @@
       当 v-if 与 v-for 一起使用时，v-for 具有比 v-if 更高的优先级
 
 ## 列表渲染
+>对象遍历（v-for）
+
+      除数组外，对象属性也是可以遍历的：
+      user:{
+         name:'Aresn',
+         gender:'男',
+         age:'26'
+      }
+      <span v-for="value in user">{{ value }}</span>
+      渲染后：<span>Aresn</span><span>男</span><span>26</span>
+      遍历对象属性时，有两个可选参数，分别是键名和索引：
+      <span v-for="（value, key, index) in user">{{ index }}-{{ key }}:{{ value }}</span>
+      渲染结果：0-name:Aresn
+              1-gender:男
+              2-age:26
+               
+>数组更新  
+
+      改变原数组：
+      push() 方法和 pop() 方法使用数组提供的先进后出栈的功能
+      push()    //向数组的开头添加一个或多个元素，并返回新的长度
+      pop()     //删除并返回数组的最后一个元素
+      shift()   //把数组的第一个元素从其中删除，并返回第一个元素的值
+      splice()  //向/从数组中添加/删除项目，然后返回被删除的项目(第一个参数整数，表示添加/删除的位置；第二个参数表示要删除的项目数量；第三个参数表示添加的新项目)
+      sort()    //对数组的元素进行排序(只是升序，倒序需要在升序基础上增加reverse())
+      reverse() //用于颠倒数组中元素的顺序
+      
+      不改变原数组，但总是会返回一个新数组：
+      filter()  //过滤
+      concat()  //用于连接两个或多个数组
+      slice()   //从已有的数组中返回选定的元素
+      
+> 注意事项
+      
+      由于 JavaScript 的限制，Vue 不能检测以下变动的数组：
+      当你利用索引直接设置一个项时，例如：vm.items[indexOfItem] = newValue
+      当你修改数组的长度时，例如：vm.items.length = newLength
+      为了解决上述问题，一下两种方式都可实现相同的效果，同时也可触发状态更新
+      // Vue.set
+      Vue.set(vm.items, indexOfItem, newValue)
+      // Array.prototype.splice
+      vm.items.splice(indexOfItem, 1, newValue)
+      或(vm.$set是全局方法Vue.set的别名)：
+      vm.$set(vm.items, indexOfItem, newValue)
+      vm.items.splice(newLength)
+      
+      由于 JavaScript 的限制，Vue 不能检测对象属性的添加或删除，但可以使用
+      Vue.set(object, key, value) 方法向嵌套对象添加响应式属性，也可以使用
+      vm.set(object, key, value)
+      
+      已有对象赋予多个新属性，可以使用Object.assign()或_.extend(),
+      vm.object = Object.assign({}, object, new object),例如：
+      
+      vm.userProfile = Object.assign({}, vm.userProfile, {
+        age: 27,
+        favoriteColor: 'Vue Green'
+      })
+      
+## 组件 （父子组件的关系可以总结为 prop 向下传递，事件向上传递。父组件通过 prop 给子组件下发数据，子组件通过事件给父组件发送消息）  
+> 父组件向子组件进行传值（父组件引入子组件通过v-bind绑定属性值，子组件通过props接收父组件的值）
+      
+      //父组件：
+      <template>
+        <div>
+          父组件:
+          <input type="text" v-model="name">
+          <br>
+          <br>
+          <!-- 引入子组件 -->
+          <child :inputName="name"></child>
+        </div>
+      </template>
+      <script>
+        import child from './child'
+        export default {
+          components: {
+            child
+          },
+          data () {
+            return {
+              name: ''
+            }
+          }
+        }
+      </script>
+      
+      //子组件：
+      <template>
+        <div>
+          子组件:
+          <span>{{inputName}}</span>
+        </div>
+      </template>
+      <script>
+        export default {
+          // 接受父组件的值
+          props: {
+            inputName: String,
+            required: true
+          }
+        }
+      </script>
+      
+> 子组件向父组件传值（子组件通过$emit事件向父组件传参，父组件引入子组件，定义一个on的方法监听子组件的状态）
+      
+      //子组件：
+      <template>
+        <div>
+          子组件:
+          <span>{{childValue}}</span>
+          <!-- 定义一个子组件传值的方法 -->
+          <input type="button" value="点击触发" @click="childClick">
+        </div>
+      </template>
+      <script>
+        export default {
+          data () {
+            return {
+              childValue: '我是子组件的数据'
+            }
+          },
+          methods: {
+            childClick () {
+              // childByValue是在父组件on监听的方法
+              // 第二个参数this.childValue是需要传的值
+              this.$emit('childByValue', this.childValue)
+            }
+          }
+        }
+      </script>
+      
+      //父组件：
+      <template>
+        <div>
+          父组件:
+          <span>{{name}}</span>
+          <br>
+          <br>
+          <!-- 引入子组件 定义一个on的方法监听子组件的状态-->
+          <child v-on:childByValue="childByValue"></child>
+        </div>
+      </template>
+      <script>
+        import child from './child'
+        export default {
+          components: {
+            child
+          },
+          data () {
+            return {
+              name: ''
+            }
+          },
+          methods: {
+            childByValue: function (childValue) {
+              // childValue就是子组件传过来的值
+              this.name = childValue
+            }
+          }
+        }
+      </script>
+      
+> 非父子组件进行传值(非父子组件之间传值，需要定义个公共的公共实例文件bus.js，作为中间仓库来传值;通过$emit事件传参，定义一个on的方法监听组件的状态)
+     
+      //公共bus.js
+      import Vue from 'vue'
+      export default new Vue()
+      
+      //组件A
+      <template>
+        <div>
+          A组件:
+          <span>{{elementValue}}</span>
+          <input type="button" value="点击触发" @click="elementByValue">
+        </div>
+      </template>
+      <script>
+        // 引入公共的bug，来做为中间传达的工具
+        import Bus from './bus.js'
+        export default {
+          data () {
+            return {
+              elementValue: 4
+            }
+          },
+          methods: {
+            elementByValue: function () {
+              Bus.$emit('val', this.elementValue)
+            }
+          }
+        }
+      </script>
+     
+      //组件B
+      <template>
+        <div>
+          B组件:
+          <input type="button" value="点击触发" @click="getData">
+          <span>{{name}}</span>
+        </div>
+      </template>
+      <script>
+        import Bus from './bus.js'
+        export default {
+          data () {
+            return {
+              name: 0
+            }
+          },
+          mounted: function () {
+            var vm = this
+            // 用$on事件来接收参数
+            Bus.$on('val', (data) => {
+              console.log(data)
+              vm.name = data
+            })
+          },
+          methods: {
+            getData: function () {
+              this.name++
+            }
+          }
+        }
+      </script>
+      
+>$nextTick
+
+- 在Vue生命周期的created()钩子函数进行的DOM操作一定要放在Vue.nextTick()的回调函数中
+      
+      
+      在created()钩子函数执行的时候DOM 其实并未进行任何渲染，而此时进行DOM操作无异于徒劳，
+      所以此处一定要将DOM操作的js代码放进Vue.nextTick()的回调函数中。与之对应的就是mounted()钩子函数，
+      因为该钩子函数执行时所有的DOM挂载和渲染都已完成，此时在该钩子函数中进行任何DOM操作都不会有问题 。
+      
+- 在数据变化后要执行的某个操作，而这个操作需要使用随数据改变而改变的DOM结构的时候，这个操作都应该放进Vue.nextTick()的回调函数中。   
+
+## 混入    
