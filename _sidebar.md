@@ -8,6 +8,7 @@
   - [linux](linux命令/linux)
 
 - 4.前端
+  - [es6](前端/es6.md)
   - [vue](前端/vue)
   - [vuex](前端/vuex)
   - [webpack](前端/webpack)
