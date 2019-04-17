@@ -253,3 +253,115 @@ repeat方法返回一个**新字符串**，表示将原字符串**重复n次**, 
  - 如果原字符串的长度，**等于或大于最大长度**，则字符串补全不生效，返回**原字符串**。
  - 如果用来补全的字符串与原字符串，两者的长度之和**超过了最大长度**，则会**截去超出位数的补全字符串**。
  - 如果**省略第二个参数**，默认使用**空格补全长度**。
+ 
+## 数值扩展
+
+- **Number.isFinite(), Number.isNaN()**
+
+ - ES6 在Number对象上，新提供了Number.isFinite()和Number.isNaN()两个方法。
+ - Number.isFinite()用来检查一个数值是否为有限的（finite），即不是Infinity。
+ - Number.isNaN()用来检查一个值是否为NaN。
+    ```
+     Number.isFinite(15); // true
+     Number.isFinite('15'); // false
+     Number.isNaN(NaN) // true
+     Number.isNaN(15) // false
+    ```
+- **Number.parseInt(), Number.parseFloat()** 
+ 
+ES6 将全局方法parseInt()和parseFloat()，移植到Number对象上面，行为完全保持不变。
+     
+     // ES5的写法
+     parseInt('12.34') // 12
+     parseFloat('123.45#') // 123.45
+     
+     // ES6的写法
+     Number.parseInt('12.34') // 12
+     Number.parseFloat('123.45#') // 123.45
+
+- **Number.isInteger()**
+
+Number.isInteger()用来判断一个数值是否为整数。JavaScript 内部，整数和浮点数采用的是同样的储存方法，所以 25 和 25.0 被视为同一个值。
+     
+     Number.isInteger(25) // true
+     Number.isInteger(25.0) // true
+     
+- **Math 对象的扩展**
+
+ - **Math.trunc()** 
+ 
+     Math.trunc方法用于去除一个数的小数部分，返回整数部分。对于非数值，Math.trunc内部使用Number方法将其先转为数值。对于空值和无法截取整数的值，返回NaN。
+        
+        Math.trunc(4.1) // 4
+        Math.trunc(-0.1234) // -0
+        
+        Math.trunc('123.456') // 123
+        Math.trunc(true) //1
+        Math.trunc(false) // 0
+        Math.trunc(null) // 0
+        
+        Math.trunc(NaN);      // NaN
+        Math.trunc('foo');    // NaN
+        
+ - **Math.sign()**
+     
+     Math.sign方法用来判断一个数到底是正数、负数、还是零。对于非数值，会先将其转换为数值。
+     **参数为正数，返回+1；参数为负数，返回-1；参数为 0，返回0；参数为-0，返回-0;其他值，返回NaN。**
+
+- **指数运算符**
+
+     2 ** 2 // 4
+     2 ** 3 // 8
+     2 ** 3 ** 2  //相当于 2 ** (3 ** 2) = 512
+
+## **函数扩展**
+
+- **箭头函数**
+
+ - ES6 允许使用“箭头”（=>）定义函数。
+   ```
+   var f = v => v;
+   
+   // 等同于
+   var f = function (v) {
+     return v;
+   };
+   ```
+ - 如果箭头函数不需要参数或需要多个参数，就使用一个圆括号代表参数部分。   
+   ```
+   var f = () => 5;
+   // 等同于
+   var f = function () { return 5 };
+   
+   var sum = (num1, num2) => num1 + num2;
+   // 等同于
+   var sum = function(num1, num2) {
+     return num1 + num2;
+   };
+   ```
+ - 如果箭头函数的代码块部分多于一条语句，就要使用大括号将它们括起来，并且使用return语句返回。
+   ```
+   var sum = (num1, num2) => { return num1 + num2; }
+   ```
+ - 由于大括号被解释为代码块，所以如果箭头函数直接返回一个对象，必须在对象外面加上括号，否则会报错。
+   ```
+   // 报错
+   let getTempItem = id => { id: id, name: "Temp" };
+   
+   // 不报错
+   let getTempItem = id => ({ id: id, name: "Temp" });
+   ```
+ <font color=red>
+ 箭头函数有几个使用注意点:</font>
+ 
+   **（1）函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。**
+
+   **（2）不可以当作构造函数，也就是说，不可以使用new命令，否则会抛出一个错误。**
+ 
+   **（3）不可以使用arguments对象，该对象在函数体内不存在。如果要用，可以用 rest 参数代替。**
+  
+   **（4）不可以使用yield命令，因此箭头函数不能用作 Generator 函数。**
+   
+## **数组扩展**
+
+- 
