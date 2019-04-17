@@ -309,12 +309,12 @@ Number.isInteger()用来判断一个数值是否为整数。JavaScript 内部，
      **参数为正数，返回+1；参数为负数，返回-1；参数为 0，返回0；参数为-0，返回-0;其他值，返回NaN。**
 
 - **指数运算符**
-
+   ```
      2 ** 2 // 4
      2 ** 3 // 8
      2 ** 3 ** 2  //相当于 2 ** (3 ** 2) = 512
-
-## **函数扩展**
+   ```
+## 函数扩展
 
 - **箭头函数**
 
@@ -362,6 +362,292 @@ Number.isInteger()用来判断一个数值是否为整数。JavaScript 内部，
   
    **（4）不可以使用yield命令，因此箭头函数不能用作 Generator 函数。**
    
-## **数组扩展**
+## 数组扩展
 
-- 
+- **扩展运算符**
+
+ 扩展运算符（spread）是三个点（...），将一个数组转为用逗号分隔的参数序列。
+      
+      console.log(1, ...[2, 3, 4], 5)  // 1 2 3 4 5
+ <font color=red> 注意，扩展运算符如果放在括号中，JavaScript 引擎就会认为这是函数调用。如果这时不是函数调用，就会报错。 </font> 
+
+ - **复制数组**   
+
+   数组是复合的数据类型，直接复制的话，只是复制了指向底层数据结构的指针，而不是克隆一个全新的数组。
+     ```
+     const a1 = [1, 2];
+     const a2 = a1;
+     
+     a2[0] = 2;
+     a1 // [2, 2]
+     // a2并不是a1的克隆，而是指向同一份数据的另一个指针。修改a2，会直接导致a1的变化
+     
+     // 以下两种写法a2都是a1的克隆
+     ES5 只能用变通方法来复制数组:
+     const a1 = [1, 2];
+     const a2 = a1.concat();
+     
+     a2[0] = 2;
+     a1 // [1, 2]
+     
+     扩展运算符提供了复制数组的简单写法：
+     const a1 = [1, 2];
+     // 写法一
+     const a2 = [...a1];
+     // 写法二
+     const [...a2] = a1;
+     ```
+ - **合并数组**  
+     ```
+     const arr1 = ['a', 'b'];
+     const arr2 = ['c'];
+     const arr3 = ['d', 'e'];
+     
+     // ES5 的合并数组
+     arr1.concat(arr2, arr3);
+     // [ 'a', 'b', 'c', 'd', 'e' ]
+     
+     // ES6 的合并数组
+     [...arr1, ...arr2, ...arr3]
+     // [ 'a', 'b', 'c', 'd', 'e' ]
+     ```
+ 
+ - **与解构赋值结合**
+     ```
+     // ES5
+     a = list[0], rest = list.slice(1)
+     // ES6
+     [a, ...rest] = list
+     
+     const [first, ...rest] = [1, 2, 3, 4, 5];
+     first // 1
+     rest  // [2, 3, 4, 5]
+     
+     // 如果将扩展运算符用于数组赋值，只能放在参数的最后一位，否则会报错。
+     const [first, ...rest] = [];
+     first // undefined
+     rest  // []
+     
+     const [first, ...rest] = ["foo"];
+     first  // "foo"
+     rest   // []
+     ```
+- **Array.of()**
+
+ Array.of方法用于将一组值，转换为数组。
+    ```
+    Array.of(3, 11, 8) // [3,11,8]
+    Array.of(3) // [3]
+    Array.of(3).length // 1
+    ```
+
+- **数组实例的find()和findIndex()**
+
+ find()用于找出**第一个符合条件的数组成员**。它的参数是一个回调函数，所有数组成员依次执行该回调函数，直到找出第一个返回值为true的成员，然后返回该成员。如果没有符合条件的成员，则返回undefined。
+    ```
+    // 三个参数，依次为当前的值、当前的位置和原数组
+    [1, 5, 10, 15].find(function(value, index, arr) {
+      return value > 9;
+    }) // 10
+    ```
+ findIndex()方法返回**第一个符合条件的数组成员的位置**，如果所有成员都不符合条件，则返回-1。
+    ```
+    [1, 5, 10, 15].findIndex(function(value, index, arr) {
+      return value > 9;
+    }) // 2
+    ```
+
+- **数组实例的fill()**
+ 
+ fill方法使用给定值，填充一个数组。fill方法还可以接受第二个和第三个参数，用于指定填充的起始位置和结束位置。
+    ```
+    ['a', 'b', 'c'].fill(7, 1, 2)
+    // ['a', 7, 'c']
+    ```
+
+- **数组实例的entries(),keys()和values()**
+
+ 用于遍历数组。keys()是对键名的遍历、values()是对键值的遍历，entries()是对键值对的遍历。
+    ```
+    for (let index of ['a', 'b'].keys()) {
+      console.log(index);
+    }
+    // 0
+    // 1
+    
+    for (let elem of ['a', 'b'].values()) {
+      console.log(elem);
+    }
+    // 'a'
+    // 'b'
+    
+    for (let [index, elem] of ['a', 'b'].entries()) {
+      console.log(index, elem);
+    }
+    // 0 "a"
+    // 1 "b"
+    
+    // 如果不使用for...of循环，可以手动调用遍历器对象的next方法，进行遍历。
+    let letter = ['a', 'b', 'c'];
+    let entries = letter.entries();
+    console.log(entries.next().value); // [0, 'a']
+    console.log(entries.next().value); // [1, 'b']
+    console.log(entries.next().value); // [2, 'c']
+    ```
+
+- **数组实例的includes()**
+
+ Array.prototype.includes方法返回一个布尔值，表示某个数组是否包含给定的值。
+    ```
+    [1, 2, 3].includes(2)     // true
+    [1, 2, 3].includes(4)     // false
+    [1, 2, NaN].includes(NaN) // true
+    ```
+ 该方法的第二个参数表示搜索的**起始位置**，默认为0。如果第二个参数为负数，则表示倒数的位置，如果这时它**大于数组长度**（比如第二个参数为-4，但数组长度为3），则会**重置为从0**开始。
+    ```
+    [1, 2, 3].includes(3, 3);  // false
+    [1, 2, 3].includes(3, -1); // true
+    
+    使用数组的indexOf方法，检查是否包含某个值
+    if (arr.indexOf(el) !== -1) {
+      // ...
+    }
+    ```
+## 对象扩展
+
+- **属性的遍历**
+ - ES6 一共有 5 种方法可以遍历对象的属性。
+   
+   （1）for...in
+   
+   for...in循环遍历对象自身的和继承的可枚举属性（不含 Symbol 属性）。
+   
+   （2）Object.keys(obj)
+   
+   Object.keys返回一个数组，包括对象自身的（不含继承的）所有可枚举属性（不含 Symbol 属性）的键名。
+   
+   （3）Object.getOwnPropertyNames(obj)
+   
+   Object.getOwnPropertyNames返回一个数组，包含对象自身的所有属性（不含 Symbol 属性，但是包括不可枚举属性）的键名。
+   
+   （4）Object.getOwnPropertySymbols(obj)
+   
+   Object.getOwnPropertySymbols返回一个数组，包含对象自身的所有 Symbol 属性的键名。
+   
+   （5）Reflect.ownKeys(obj)
+   
+   Reflect.ownKeys返回一个数组，包含对象自身的所有键名，不管键名是 Symbol 或字符串，也不管是否可枚举。
+
+- **对象的扩展运算符**
+    ```
+    let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 };
+    x // 1
+    y // 2
+    z // { a: 3, b: 4 }
+    ```
+## 对象的新增方法
+
+ - **Object.is()**
+ 
+   用来比较两个值是否严格相等，与严格比较运算符（===）的行为基本一致
+    ```
+    不同之处只有两个：一是+0不等于-0，二是NaN等于自身。
+    +0 === -0 //true
+    NaN === NaN // false
+    
+    Object.is(+0, -0) // false
+    Object.is(NaN, NaN) // true
+    ```
+ - **Object.assign()**
+ 
+   Object.assign方法用于对象的合并，将源对象（source）的所有可枚举属性，复制到目标对象（target）;如果目标对象与源对象有同名属性，或多个源对象有同名属性，则后面的属性会覆盖前面的属性。
+   ```
+   const target = { a: 1, b: 1 };
+   
+   const source1 = { b: 2, c: 2 };
+   const source2 = { c: 3 };
+   
+   Object.assign(target, source1, source2);
+   target // {a:1, b:2, c:3}
+   // 或者
+   const obj = Object.assign({},target, source1, source2)
+   obj // {a:1, b:2, c:3}
+   ```
+ - **Object.keys()，Object.values()，Object.entries()**
+   - **Object.keys()**
+    ```
+    let {keys, values, entries} = Object;
+    let obj = { a: 1, b: 2, c: 3 };
+    
+    for (let key of keys(obj)) {
+      console.log(key); // 'a', 'b', 'c'
+    }
+    
+    for (let value of values(obj)) {
+      console.log(value); // 1, 2, 3
+    }
+    
+    for (let [key, value] of entries(obj)) {
+      console.log([key, value]); // ['a', 1], ['b', 2], ['c', 3]
+    }
+    ```
+   - **Object.values()**
+    
+    Object.values方法返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历属性的键值。
+     ```
+     const obj = { foo: 'bar', baz: 42 };
+     Object.values(obj)
+     // ["bar", 42]
+     ```
+    
+   - **Object.entries()**
+    
+    Object.entries()方法返回一个数组，成员是参数对象自身的（不含继承的）所有可遍历属性的键值对数组。
+     ```
+     const obj = { foo: 'bar', baz: 42 };
+     Object.entries(obj)
+     // [ ["foo", "bar"], ["baz", 42] ]
+     ```
+     
+## Symbol(数据类型)
+
+ - Symbol 值通过**Symbol函数**生成。对象的**属性名**现在可以有两种**类型**，一种是原来就有的**字符串**，另一种就是新增的 **Symbol 类型**。凡是属性名属于 Symbol 类型，就都是独一无二的，可以保证不会与其他属性名产生冲突。
+ 
+ - Symbol函数的参数只是表示对当前 Symbol 值的描述，因此**相同参数**的Symbol函数的**返回值是不相等的**。
+  ```
+  // 没有参数的情况
+  let s1 = Symbol();
+  let s2 = Symbol();
+  
+  s1 === s2 // false
+  
+  // 有参数的情况
+  let s1 = Symbol('foo');
+  let s2 = Symbol('foo');
+  
+  s1 === s2 // false
+  ```
+## Set和Map数据结构
+
+- **Set**
+ 
+ Set本身是一个构造函数，用来生成 Set 数据结构。 Set数据结构类似于数组，成员的值都是唯一的，没有重复的值。
+  ```
+   const s = new Set();
+   [2, 3, 5, 4, 5, 2, 2].forEach(x => s.add(x)){
+       for(let i of s){
+          
+       }
+   }
+  ```
+- **WeakSet**
+
+
+- **Map**
+
+
+
+- **WeakMap**
+
+ 
+ 
