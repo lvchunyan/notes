@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46b0ea1d-7e06-4147-9037-d3bfbf1a0045" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/前端项目小结/浏览器的兼容性.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sidebar.md" beforeDir="false" afterPath="$PROJECT_DIR$/_sidebar.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/前端项目小结/参考资料.md" beforeDir="false" afterPath="$PROJECT_DIR$/前端项目小结/参考资料.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/前端项目小结/校验方法集.md" beforeDir="false" afterPath="$PROJECT_DIR$/前端项目小结/校验方法集.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -65,12 +64,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="参考资料.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="参考资料.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/前端项目小结/参考资料.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="289">
-                <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+              <first_editor relative-caret-position="85">
+                <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
               </first_editor>
               <second_editor />
             </state>
@@ -101,23 +100,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="浏览器的兼容性.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="浏览器的兼容性.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/前端项目小结/浏览器的兼容性.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="183">
-                <caret line="93" column="13" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
+              <first_editor relative-caret-position="237">
+                <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
               </first_editor>
               <second_editor />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="20" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
+      <file leaf-file-name="前端快速开发手册.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/前端项目小结/前端快速开发手册.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="254">
+                <caret line="143" selection-start-line="143" selection-end-line="143" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="校验方法集.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/前端项目小结/校验方法集.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="356">
+                <caret line="112" column="3" selection-start-line="112" selection-start-column="3" selection-end-line="112" selection-end-column="3" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -132,11 +146,6 @@
               <second_editor />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="image.jpg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/image.jpg">
-          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
     </leaf>
@@ -180,14 +189,14 @@
         <option value="$PROJECT_DIR$/前端/vuex.md" />
         <option value="$PROJECT_DIR$/前端/webpack.md" />
         <option value="$PROJECT_DIR$/前端项目小结/前端快速开发手册.md" />
-        <option value="$PROJECT_DIR$/前端项目小结/校验方法集.md" />
         <option value="$PROJECT_DIR$/_coverpage.md" />
         <option value="$PROJECT_DIR$/前端/es6.md" />
         <option value="$PROJECT_DIR$/名言警句.md" />
-        <option value="$PROJECT_DIR$/前端项目小结/参考资料.md" />
         <option value="$PROJECT_DIR$/前端项目小结/开发常见问题.md" />
         <option value="$PROJECT_DIR$/_sidebar.md" />
         <option value="$PROJECT_DIR$/前端项目小结/浏览器的兼容性.md" />
+        <option value="$PROJECT_DIR$/前端项目小结/校验方法集.md" />
+        <option value="$PROJECT_DIR$/前端项目小结/参考资料.md" />
       </list>
     </option>
   </component>
@@ -332,12 +341,12 @@
       <workItem from="1555634850634" duration="594000" />
       <workItem from="1555894193079" duration="848000" />
       <workItem from="1555980244291" duration="1034000" />
-      <workItem from="1560214375938" duration="2292000" />
+      <workItem from="1560214375938" duration="3764000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114995000" />
+    <option name="totallyTimeSpent" value="116467000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -727,26 +736,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/前端项目小结/校验方法集.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1887">
-            <caret line="111" column="3" selection-start-line="111" selection-start-column="3" selection-end-line="111" selection-end-column="3" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/前端项目小结/前端快速开发手册.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="243">
-            <caret line="143" selection-start-line="143" selection-end-line="143" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/markdown/markdown基本语法.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -802,16 +791,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/前端项目小结/参考资料.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="289">
-            <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -842,11 +821,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/前端项目小结/校验方法集.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="356">
+            <caret line="112" column="3" selection-start-line="112" selection-start-column="3" selection-end-line="112" selection-end-column="3" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/前端项目小结/浏览器的兼容性.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="183">
-            <caret line="93" column="13" selection-start-line="93" selection-start-column="13" selection-end-line="93" selection-end-column="13" />
+          <first_editor relative-caret-position="237">
+            <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端项目小结/前端快速开发手册.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="254">
+            <caret line="143" selection-start-line="143" selection-end-line="143" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端项目小结/参考资料.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="85">
+            <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
           </first_editor>
           <second_editor />
         </state>
