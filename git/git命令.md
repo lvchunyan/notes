@@ -1,5 +1,26 @@
 ## 常见命令
 
+[详细地址](http://www.cheat-sheets.org/saved-copy/git-cheat-sheet.pdf)
+
+[git入门和进阶](http://git.mydoc.io/?t=154712#category_19221)
+
+- git 添加gitignore文件，忽略某些文件，避免其提交
+```markdown
+一.先在项目路径下添加.gitignore文件
+在Git Bash应用中输入 touch .gitignore 指令
+二.编辑.gitignore文件，其实就是输入一些相对路径或者通配符来避免文件提交。
+
+# 此为注释 – 将被 Git 忽略
+
+      *.a       # 忽略所有 .a 结尾的文件
+      !lib.a    # 但 lib.a 除外
+       /TODO     # 仅仅忽略项目根目录下的 TODO 文件，不包括 subdir/TODO
+       build/    # 忽略 build/ 目录下的所有文件
+
+       doc/*.txt # 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
+```
+
+## git常用指令
 - git --version   //查看git的版本信息
 - git config --global user.name   //获取当前登录的用户
 - git config --global user.email  //获取当前登录用户的邮箱
@@ -32,7 +53,10 @@
 - 指定标签说明：git tag –a 标签名 –m "标签说明" [可选：版本ID]
 - 查看所有标签：git tag
 - 查看某一标签：git show 标签名
-- 删除某一标签：git tag –d 标签名
+- 删除本地标签：git tag –d 标签名
+- 删除远程标签：git push origin --delete tag 标签名
+- 提交指定标签：git push origin 标签名
+- 提交本地所有标签：git push origin --tags
 
 ## 上传命令
 - git add .  //增加到暂存区中
