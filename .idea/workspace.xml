@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="46b0ea1d-7e06-4147-9037-d3bfbf1a0045" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/git/git命令.md" beforeDir="false" afterPath="$PROJECT_DIR$/git/git命令.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/前端项目小结/参考资料.md" beforeDir="false" afterPath="$PROJECT_DIR$/前端项目小结/参考资料.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,18 +28,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="vuex.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/前端/vuex.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="6120">
-                <caret line="360" column="37" selection-start-line="360" selection-start-column="37" selection-end-line="360" selection-end-column="37" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="vue框架小结.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/前端/vue框架小结.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -67,7 +56,7 @@
         <entry file="file://$PROJECT_DIR$/前端项目小结/开发常见问题.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-1036">
+              <first_editor relative-caret-position="2601">
                 <caret line="153" column="39" selection-start-line="153" selection-start-column="39" selection-end-line="153" selection-end-column="39" />
               </first_editor>
               <second_editor />
@@ -75,12 +64,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="git命令.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="git命令.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/git/git命令.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="238">
-                <caret line="22" column="32" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="32" />
+              <first_editor relative-caret-position="221">
+                <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="参考资料.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/前端项目小结/参考资料.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="187">
+                <caret line="11" column="59" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="59" />
               </first_editor>
               <second_editor />
             </state>
@@ -91,7 +92,7 @@
         <entry file="file://$PROJECT_DIR$/前端项目小结/公共方法集.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="239">
+              <first_editor relative-caret-position="7123">
                 <caret line="419" column="11" selection-start-line="419" selection-start-column="11" selection-end-line="419" selection-end-column="11" />
               </first_editor>
               <second_editor />
@@ -103,7 +104,7 @@
         <entry file="file://$PROJECT_DIR$/前端项目小结/前端代码规范.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="69">
+              <first_editor relative-caret-position="3740">
                 <caret line="220" column="5" selection-start-line="220" selection-start-column="5" selection-end-line="220" selection-end-column="5" />
               </first_editor>
               <second_editor />
@@ -192,13 +193,13 @@
         <option value="$PROJECT_DIR$/_sidebar.md" />
         <option value="$PROJECT_DIR$/前端项目小结/浏览器的兼容性.md" />
         <option value="$PROJECT_DIR$/前端项目小结/校验方法集.md" />
-        <option value="$PROJECT_DIR$/前端项目小结/参考资料.md" />
         <option value="$PROJECT_DIR$/前端项目小结/公共方法集.md" />
         <option value="$PROJECT_DIR$/前端项目小结/前端代码规范.md" />
         <option value="$PROJECT_DIR$/前端项目小结/前端快速开发手册.md" />
         <option value="$PROJECT_DIR$/前端/es6.md" />
         <option value="$PROJECT_DIR$/前端项目小结/开发常见问题.md" />
         <option value="$PROJECT_DIR$/git/git命令.md" />
+        <option value="$PROJECT_DIR$/前端项目小结/参考资料.md" />
       </list>
     </option>
   </component>
@@ -237,23 +238,13 @@
               <item name="notes" type="b2602c69:ProjectViewProjectNode" />
               <item name="notes" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="notes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="notes" type="462c0819:PsiDirectoryNode" />
-              <item name="git" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="notes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="notes" type="462c0819:PsiDirectoryNode" />
-              <item name="前端项目小结" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -351,16 +342,16 @@
       <workItem from="1560232208827" duration="1973000" />
       <workItem from="1560240756208" duration="724000" />
       <workItem from="1560301318910" duration="9356000" />
-      <workItem from="1560392089322" duration="5654000" />
+      <workItem from="1560392089322" duration="6448000" />
+      <workItem from="1560474070068" duration="2697000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="137526000" />
+    <option name="totallyTimeSpent" value="141017000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -372,10 +363,10 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3289256" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49924356" visible="true" weight="0.2429752" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49924356" visible="true" weight="0.23966943" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17776097" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18003026" />
       <window_info anchor="bottom" id="Statistic" order="7" />
       <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -394,21 +385,21 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="0" />
-      <window_info anchor="bottom" id="Version Control" order="5" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
-      <window_info anchor="bottom" id="Run" order="8" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="5" />
       <window_info anchor="right" id="Theme Preview" order="2" />
-      <window_info id="Favorites" order="4" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.24962178" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.24962178" />
       <window_info anchor="bottom" id="TODO" order="12" />
       <window_info anchor="bottom" id="TypeScript" order="1" />
+      <window_info anchor="bottom" id="Run" order="8" />
       <window_info id="Image Layers" order="0" />
       <window_info id="Designer" order="1" />
-      <window_info anchor="bottom" id="Statistic" order="2" />
+      <window_info id="Capture Tool" order="3" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Find" order="7" weight="0.3289256" />
       <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
@@ -418,10 +409,10 @@
       <window_info anchor="bottom" id="Database Changes" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
-      <window_info id="Capture Tool" order="3" />
+      <window_info anchor="bottom" id="Statistic" order="2" />
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="right" id="Maven Projects" order="5" weight="0.32980332" />
-      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info id="Favorites" order="4" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -720,16 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/前端项目小结/参考资料.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="187">
-            <caret line="11" column="30" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/前端/es6.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -818,7 +799,7 @@
     <entry file="file://$PROJECT_DIR$/前端项目小结/公共方法集.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="239">
+          <first_editor relative-caret-position="7123">
             <caret line="419" column="11" selection-start-line="419" selection-start-column="11" selection-end-line="419" selection-end-column="11" />
           </first_editor>
           <second_editor />
@@ -828,7 +809,7 @@
     <entry file="file://$PROJECT_DIR$/前端项目小结/前端代码规范.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="69">
+          <first_editor relative-caret-position="3740">
             <caret line="220" column="5" selection-start-line="220" selection-start-column="5" selection-end-line="220" selection-end-column="5" />
           </first_editor>
           <second_editor />
@@ -858,7 +839,7 @@
     <entry file="file://$PROJECT_DIR$/前端项目小结/开发常见问题.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-1036">
+          <first_editor relative-caret-position="2601">
             <caret line="153" column="39" selection-start-line="153" selection-start-column="39" selection-end-line="153" selection-end-column="39" />
           </first_editor>
           <second_editor />
@@ -868,8 +849,18 @@
     <entry file="file://$PROJECT_DIR$/git/git命令.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="238">
-            <caret line="22" column="32" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="32" />
+          <first_editor relative-caret-position="221">
+            <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/前端项目小结/参考资料.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="187">
+            <caret line="11" column="59" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="59" />
           </first_editor>
           <second_editor />
         </state>
