@@ -20,6 +20,18 @@
        doc/*.txt # 会忽略 doc/notes.txt 但不包括 doc/server/arch.txt
 ```
 
+- 删除项目文件
+```markdown
+1. 方法一
+cnpm install rimraf -g
+rimraf node_modules
+
+2. 方法二
+cnpm install -g dlf 
+dlf  C:\Users\92809\Desktop\12
+
+```
+
 ## git常用指令
 - git --version   //查看git的版本信息
 - git config --global user.name   //获取当前登录的用户
