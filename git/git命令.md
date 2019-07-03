@@ -4,6 +4,10 @@
 
 [git入门和进阶](http://git.mydoc.io/?t=154712#category_19221)
 
+[Mac 一个实用工具小站](https://www.jianshu.com/p/5965095d7835)
+
+[Mac 更新node版本](https://www.jianshu.com/p/71c82fc63522)
+
 - git push 需要输入用户名和密码
 ```markdown
 git config credential.helper store
