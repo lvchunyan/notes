@@ -4,11 +4,18 @@
 
 [git入门和进阶](http://git.mydoc.io/?t=154712#category_19221)
 
+- git push 需要输入用户名和密码
+```markdown
+git config credential.helper store
+```
+
+
 - git 添加gitignore文件，忽略某些文件，避免其提交
 ```markdown
 一.先在项目路径下添加.gitignore文件
 在Git Bash应用中输入 touch .gitignore 指令
 二.编辑.gitignore文件，其实就是输入一些相对路径或者通配符来避免文件提交。
+
 
 # 此为注释 – 将被 Git 忽略
 
